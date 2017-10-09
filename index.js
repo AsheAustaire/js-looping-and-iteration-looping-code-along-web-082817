@@ -5,5 +5,19 @@ function printBadges(names) {
   return names
 }
 
+function tailsNeverFails() {
+  tails = true
+
+  counter = 0
+
+  while (tails === true){
+    flip = Math.random()
+    if (flip <= 0.5){
+      counter += 1
+      flip = Math.random()
+    } else {
+      return `You got ${counter} tails in a row!`
+    }
+  }
 
 }
